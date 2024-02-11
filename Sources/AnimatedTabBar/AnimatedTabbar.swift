@@ -118,7 +118,9 @@ public struct AnimatedTabBar: View {
                 }
             }
         }
-        .offset(y: 50)
+        .offset(y: -10)
+        .background(.black)
+        .cornerRadius(12)
     }
 
     @ViewBuilder
