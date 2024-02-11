@@ -101,6 +101,7 @@ public struct AnimatedTabBar: View {
                     self.frames = frames
                 }
                 .padding(.vertical, verticalPadding)
+                .padding(.bottom, 30)
             }
             .fixedSize(horizontal: false, vertical: true)
         }
@@ -117,6 +118,7 @@ public struct AnimatedTabBar: View {
                 }
             }
         }
+        .offset(y: 50)
     }
 
     @ViewBuilder
