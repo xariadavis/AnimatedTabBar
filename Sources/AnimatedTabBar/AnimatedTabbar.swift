@@ -67,7 +67,7 @@ public struct AnimatedTabBar: View {
         VStack {
             HStack(alignment: .bottom) {
                 circle
-                    .blur(1)
+                    .blur(radius: 1)
                 Spacer()
             }
 
@@ -120,7 +120,7 @@ public struct AnimatedTabBar: View {
             }
         }
         .offset(y: -10)
-        .background(Color.grey)
+        .background(Color.gray)
         .cornerRadius(12)
     }
 
