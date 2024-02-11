@@ -61,12 +61,13 @@ public struct AnimatedTabBar: View {
     @State private var tIndent: CGFloat = 0
     @State private var internalPrevSelectedIndex: Int
 
-    private let circleSize = 10.0
+    private let circleSize = 11.0
 
     public var body: some View {
         VStack {
             HStack(alignment: .bottom) {
                 circle
+                    .blur(1)
                 Spacer()
             }
 
@@ -119,7 +120,7 @@ public struct AnimatedTabBar: View {
             }
         }
         .offset(y: -10)
-        .background(.black)
+        .background(Color.grey)
         .cornerRadius(12)
     }
 
