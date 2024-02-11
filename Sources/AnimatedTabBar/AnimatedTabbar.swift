@@ -39,7 +39,8 @@ public struct AnimatedTabBar: View {
 
     // MARK: - Customization
 
-    private var barColor: Color = Color.defaultMainColor
+    private var barColor: Color = Color.white
+    private var barBackgroundColor: Color = Color.gray
     private var selectedColor: Color = .red
     private var unselectedColor: Color = .black
     private var ballColor: Color = .red
@@ -66,8 +67,7 @@ public struct AnimatedTabBar: View {
     public var body: some View {
         VStack {
             HStack(alignment: .bottom) {
-                circle
-                    .blur(radius: 1)
+                circle.blur(radius: 1)
                 Spacer()
             }
 
@@ -119,8 +119,8 @@ public struct AnimatedTabBar: View {
                 }
             }
         }
-        .offset(y: -10)
-        .background(Color(.systemGray5))
+        .offset(y: -7)
+        .background(barBackgroundColor)
         .cornerRadius(12)
     }
 
@@ -173,6 +173,7 @@ public struct AnimatedTabBar: View {
         case .straight:
             SlidingIndentRect(t: tIndent, indentX: getCoord(selectedIndex).x, prevIndentX: getCoord(internalPrevSelectedIndex).x)
                 .foregroundColor(barColor)
+            
         }
     }
 
@@ -201,11 +202,17 @@ public struct AnimatedTabBar: View {
     }
 
     // MARK: - Customization setters
-
+    
     public func barColor(_ color: Color) -> AnimatedTabBar {
-        var switcher = self
-        switcher.barColor = color
-        return switcher
+        var tabBar = self
+        tabBar.barColor = color
+        return tabBar
+    }
+
+    public func barBackgroundColor(_ color: Color) -> AnimatedTabBar {
+        var tabBar = self
+        tabBar.barBackgroundColor = color
+        return tabBar
     }
 
     public func selectedColor(_ color: Color) -> AnimatedTabBar {
