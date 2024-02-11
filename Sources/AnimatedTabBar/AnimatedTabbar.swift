@@ -120,7 +120,7 @@ public struct AnimatedTabBar: View {
             }
         }
         .offset(y: -10)
-        .background(Color(.systemGray5))
+        .background(Color(.systemGray5).opacity(0.5).blur(radius: 2))
         .cornerRadius(12)
     }
 
