@@ -39,7 +39,7 @@ public struct AnimatedTabBar: View {
 
     // MARK: - Customization
 
-    private var barColor: Color = Color(.systemGray6)
+    private var barColor: Color = Color.defaultMainColor
     private var selectedColor: Color = .red
     private var unselectedColor: Color = .black
     private var ballColor: Color = .red
@@ -120,7 +120,7 @@ public struct AnimatedTabBar: View {
             }
         }
         .offset(y: -10)
-        .background(Color(.systemGray4))
+        .background(Color.darkDefaultMainColor)
         .cornerRadius(12)
     }
 
